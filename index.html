@@ -3,11 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descargar APK</title>
+    <title>TeLLevo - Tu Compañero de Viaje Perfecto</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f5a623;
+            --text-color: #333;
+            --background-color: #f9f9f9;
+            --card-background: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .features {
+            padding: 4rem 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: var(--card-background);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .download-section {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .download-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Bienvenido</h1>
-    <p>Haz clic en el siguiente enlace para descargar la aplicación:</p>
-    <a href="https://github.com/JaKngel/TeLLevoApk/releases/download/1.0.0/TeLLevoApp.apk" download>Descargar APK</a>
+    <header>
+        <nav class="container">
+            <div class="logo">TeLLevo</div>
+            <div class="nav-links">
+                <a href="#features">Características</a>
+                <a href="#download">Descargar</a>
+                <a href="#about">Acerca de</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Tu Compañero de Viaje Perfecto</h1>
+                <p>TeLLevo es la aplicación que revoluciona la forma en que te mueves. Viaja seguro, cómodo y a tu ritmo.</p>
+                <a href="https://github.com/JaKngel/TeLLevoApk/releases/download/1.0.0/TeLLevoApp.apk" class="cta-button" download>Descargar APK</a>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>Seguro</h3>
+                        <p>Viaja con tranquilidad. Todos nuestros conductores están verificados.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⭐</div>
+                        <h3>Confiable</h3>
+                        <p>Sistema de calificación transparente y comentarios verificados.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3>Fácil de Usar</h3>
+                        <p>Interfaz intuitiva diseñada para una experiencia sin complicaciones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download-section">
+            <div class="container">
+                <h2>Descarga TeLLevo Ahora</h2>
+                <p>Únete a nuestra comunidad y disfruta de una nueva forma de viajar.</p>
+                <a href="https://github.com/JaKngel/TeLLevoApk/releases/download/1.0.0/TeLLevoApp.apk" class="cta-button" download>Descargar APK</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 TeLLevo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
